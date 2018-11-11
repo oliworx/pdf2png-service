@@ -1,0 +1,16 @@
+{
+  "name": "pdf2png",
+  "version": "1.0.0",
+  "description": "webservice to convert a PDF file to a PNG image",
+  "main": "server.js",
+  "scripts": {
+    "debug": "node-debug ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Kurmis  <oliver@kurmis.com> (https://www.kurmis.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.1.0",
+    "pdfjs-dist": "^2.0.943"
+  }
+}
