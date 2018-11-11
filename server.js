@@ -3,6 +3,8 @@ const { createCanvas } = require('canvas')
 const assert = require('assert');
 const pdfjsLib = require('pdfjs-dist');
 
+const port = process.env.PORT || 3001;
+
 function NodeCanvasFactory() {}
 NodeCanvasFactory.prototype = {
   create: function NodeCanvasFactory_create(width, height) {
@@ -86,6 +88,6 @@ http.createServer(function (req, res) {
     
     });
     
-}).listen(3000, "127.0.0.1");
+}).listen(port, "0.0.0.0");
 
-console.log('PDF2PNG Server running at http://127.0.0.1:3000 waiting for PDF data via POST requests');
+console.log('PDF2PNG Server listening on ' + port + ' waiting for PDF data via POST requests');
