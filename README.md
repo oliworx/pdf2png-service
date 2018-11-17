@@ -21,9 +21,15 @@ _PDF2PNG Server listening on 3001 waiting for PDF data via POST requests_
 
 Now use a POST request to send a PDF file to the webservice:
 
-    curl -H "Transfer-Encoding: chunked" --data-binary @myfile.pdf http://127.0.0.1:3000/ -o firstpage.png
+    curl --data-binary @myfile.pdf http://127.0.0.1:3000/ -o firstpage.png
 
 The first page of the input PDF file will be saved as `firstpage.png` .
+
+### Docker
+
+    docker run -p 3080:3001 oliworx/pdf2png-service
+
+will start the webservice on http://localhost:3080
 
 ## Licence
 MIT License: <https://kurmis.mit-license.org>
