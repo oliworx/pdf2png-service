@@ -1,20 +1,27 @@
 {
   "name": "pdf2png-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "webservice to convert a PDF file to a PNG image",
-  "keywords": ["pdf", "converter", "png", "webservice"],
+  "keywords": [
+    "pdf",
+    "converter",
+    "png",
+    "webservice"
+  ],
   "homepage": "https://github.com/oliworx/pdf2png-service#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/oliworx/pdf2png-service.git"
+    "type": "git",
+    "url": "https://github.com/oliworx/pdf2png-service.git"
   },
   "bugs": "https://github.com/oliworx/pdf2png-service/issues",
   "main": "server.js",
   "author": "Oliver Kurmis  <oliver@kurmis.com> (https://www.kurmis.com/)",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.1.0",
+    "canvas": "^2.4.1",
     "pdfjs-dist": "^2.0.943"
   },
-  "engines" : { "node" : ">=8.0" }
+  "engines": {
+    "node": ">=8.0"
+  }
 }
