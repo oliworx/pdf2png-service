@@ -1,6 +1,6 @@
 {
   "name": "pdf2png-service",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "webservice to convert a PDF file to a PNG image",
   "keywords": [
     "pdf",
@@ -18,8 +18,8 @@
   "author": "Oliver Kurmis  <oliver@kurmis.com> (https://www.kurmis.com/)",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.4.1",
-    "pdfjs-dist": "^2.0.943"
+    "canvas": "^2.6.0",
+    "pdfjs-dist": "^2.1.266"
   },
   "engines": {
     "node": ">=8.0"

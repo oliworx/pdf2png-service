@@ -3,11 +3,10 @@
 A webservice to convert PDF files to PNG images, based on Node.js
 
 ## Setup
-Install Node.js, e.g. `nvm i 10`  
+Install Node.js, e.g. `nvm i 12`  
 Install dependencies: `npm install` 
 
 ## Configuration
-
 The default port is 3001.
 
 The port can be changed with the environment variable $APP_PORT
