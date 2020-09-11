@@ -1,6 +1,6 @@
 {
   "name": "pdf2png-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "webservice to convert a PDF file to a PNG image",
   "keywords": [
     "pdf",
@@ -19,9 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
-    "pdfjs-dist": "2.3.*"
+    "pdfjs-dist": "^2.4.456"
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=10.0"
   }
 }
