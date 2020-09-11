@@ -3,7 +3,7 @@ const {createCanvas} = require('canvas');
 const assert = require('assert');
 const pdfjsLib = require('pdfjs-dist/es5/build/pdf.js');
 
-const port = process.env.APP_PORT || 3001;
+const port = process.env.PDF2PNG_PORT || 3001;
 
 function NodeCanvasFactory() {
 }
