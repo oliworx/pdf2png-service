@@ -1,9 +1,9 @@
 const http = require('http');
 const {createCanvas} = require('canvas');
 const assert = require('assert');
-const pdfjsLib = require('pdfjs-dist');
+const pdfjsLib = require('pdfjs-dist/es5/build/pdf.js');
 
-const port = process.env.APP_PORT || 3001;
+const port = process.env.PDF2PNG_PORT || 3001;
 
 function NodeCanvasFactory() {
 }
@@ -59,13 +59,13 @@ http.createServer(function (req, res) {
         // Read the PDF file into a typed array so PDF.js can load it.
         const rawData = new Uint8Array(Buffer.concat(chunks));
         // Load the PDF file.
-        pdfjsLib.getDocument(rawData).then(function (pdfDocument) {
+        pdfjsLib.getDocument(rawData).promise.then(function (pdfDocument) {
             console.log((new Date()).toISOString() + ' PDF loaded (' + rawData.byteLength + ' Bytes)');
 
             // Get the first page.
             pdfDocument.getPage(1).then(function (page) {
                 // Render the page on a Node canvas with 100% scale.
-                const viewport = page.getViewport(1.0);
+                const viewport = page.getViewport({ scale: 1, });
                 const canvasFactory = new NodeCanvasFactory();
                 const canvasAndContext = canvasFactory.create(viewport.width, viewport.height);
                 const renderContext = {
@@ -74,7 +74,7 @@ http.createServer(function (req, res) {
                     canvasFactory: canvasFactory
                 };
 
-                page.render(renderContext).then(function () {
+                page.render(renderContext).promise.then(function () {
                     console.log((new Date()).toISOString() + ' page rendered');
                     res.writeHead(200, {'Content-Type': 'image/png'});
                     // convert the canvas to a png stream.
