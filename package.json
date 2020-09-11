@@ -18,7 +18,7 @@
   "author": "Oliver Kurmis  <oliver@kurmis.com> (https://www.kurmis.com/)",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.6.0",
+    "canvas": "^2.6.1",
     "pdfjs-dist": "^2.1.266"
   },
   "engines": {
