@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
-    "pdfjs-dist": "^2.1.266"
+    "pdfjs-dist": "2.3.*"
   },
   "engines": {
     "node": ">=8.0"
