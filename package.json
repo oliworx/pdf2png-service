@@ -1,6 +1,6 @@
 {
   "name": "pdf2png-service",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "webservice to convert a PDF file to a PNG image",
   "keywords": [
     "pdf",
