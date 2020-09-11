@@ -3,7 +3,7 @@
 A webservice to convert PDF files to PNG images, based on Node.js
 
 ## Setup
-Install Node.js, e.g. `nvm i 12`  
+Install Node.js, e.g. `nvm i 14`  
 Install dependencies: `npm install` 
 
 ## Configuration
